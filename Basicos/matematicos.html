@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label>Num 1</label>
+    <input type="number" id="num1">
+    <label>Num 2</label>
+    <input type="number" id="num2">
+    </div>
+    <hr>
+    <br>
+    <div>
+        <input type="button" value="Suma (+)" onclick="Mostrar(1)">
+        <input type="button" value="Resta (-)" onclick="Mostrar(2)">
+        <input type="button" value="Multiplicacion (*)" onclick="Mostrar(3)">
+        <input type="button" value="Division (/)" onclick="Mostrar(4)">
+    </div>
+    
+    <script src="matematicos.js"> </script>
+    <script>
+        
+        function Mostrar(select) {
+            let num1;
+            let num2;
+            function GetNums() {
+                num1 = parseInt(document.getElementById("num1").value);
+                num2 = parseInt(document.getElementById("num2").value);
+            }
+            switch (select) {
+                case 1:
+                    GetNums();
+                    console.log(Suma(num1,num2));
+                    break;
+                case 2:
+                     GetNums();
+                    console.log(Resta(num1,num2));
+                    break;
+                case 3:
+                    GetNums();
+                    console.log(Multi(num1,num2));
+                    break;
+                case 4:
+                    GetNums();
+                    console.log(Divi(num1,num2));
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
